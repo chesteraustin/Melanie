@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div id="header">
+		<h1>Breast Pump Entry</h1>
+    </div>
+    <div id="input">
+        <form role="form" class="formEntry">
+        <fieldset>
+            <legend>When Did You Pump?</legend>
+            <div class="form-group">
+				<label for="pumpDate">Date</label>
+				<input type="date" name="pumpDate" id="pumpDate" class="form-control">                
+            </div>
+
+            <div class="form-group">
+				<label for="pumpTime">Time</label>
+				<input type="time" name="pumpTime" id="pumpTime" class="form-control">                
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>How Much Did You Pump?</legend>
+            <div class="form-group">
+				<label for="leftSide">Left Side</label>
+				<input type="number" name="leftSide" id="leftSide" class="form-control">                
+            </div>
+
+            <div class="form-group">
+				<label for="rightSide">Right Side</label>
+				<input type="number" name="rightSide" id="rightSide" class="form-control">                
+            </div>
+
+            <div class="form-group">
+				<label for="pumpTotal">Total</label>
+				<input type="number" name="pumpTotal" id="pumpTotal" class="form-control">                
+            </div>
+
+            <div class="form-group">
+				<select name="pumpUnit" id="pumpUnit" class="form-control">
+					<option value="mL">milliliter (mL)</option>
+					<option value="oz">Fluid Ounce (oz)</option>
+				</select>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Where Did It Go?</legend>
+            <div class="form-group">
+				<select name="storageLocation" id="storageLocation" class="form-control">
+					<option value="refrigerator">Refrigerator</option>
+					<option value="freezer bag">Freezer (bag)</option>
+					<option value="freezer bottle">Freezer (bottle)</option>
+					<option value="immediate">Immediately given (~ 3 hours)</option>
+					<option value="discard">Discarded</option>
+				</select>
+            </div>
+		</fieldset>
+		<input type="button" class="btn btn-lg btn-primary" name="submit" id="submit" value="Submit">
+		<input type="button" class="btn btn-lg btn-primary" name="newEntry" id="newEntry" value="Create New Entry">
+		<a class="btn btn-lg btn-primary" href="pumpReport.html">Back To Reports</a>
+		</form>
+    </div>
+<div id="errorSave" class="alert alert-danger" role="alert">
+	<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+	<span class="sr-only">Error:</span> <span>Entry Save failed. Please try again later.</span>
+</div>
+    <!--Moved scripts to bottom of page -->
+    <script src="https://code.jquery.com/jquery-2.1.0.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="javascript/pumpEntry.js"></script>
+</body>
+</html>
